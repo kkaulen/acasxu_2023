@@ -271,7 +271,7 @@ def main():
 
     # generate spec files
     for spec in range(1, 11):
-        filename = f"prop_{spec}.vnnlib"
+        filename = f"./vnnlib/prop_{spec}.vnnlib"
         print(f"Generating {filename}...")
         
         with open(filename, 'w') as f:
@@ -297,7 +297,7 @@ def main():
         prop_net_list = [(5, 1, 1), (6, 1, 1), (7, 1, 9), (8, 2, 9), (9, 3, 3), (10, 4, 5)]
 
         for prop_num, a, b in prop_net_list:
-            p = f'prop_{prop_num}.vnnlib'
+            p = f'vnnlib/prop_{prop_num}.vnnlib'
             o = f'ACASXU_run2a_{a}_{b}_batch_2000.onnx'
 
             f.write(f'{o},{p},{benchmark_timeout}\n')
